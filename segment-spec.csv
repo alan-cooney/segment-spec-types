@@ -1,0 +1,498 @@
+﻿Spec,Name,Event Description,prop name,type,prop description,Req'd/Optional
+eCommerce,Products Searched,User searched for products,query,String,Query the user searched with,O
+eCommerce,Product List Viewed,User viewed a product list or category,list_id,String,Product list being viewed,O
+,,,category,String,Product category being viewed,O
+,,,products,Array,Products displayed in the product list,R
+,,,products.$.product_id,String,Product ID displayed in the list,R
+,,,products.$.sku,String,Product SKU displayed in the list,O
+,,,products.$.category,String,Product Category displayed in the list,O
+,,,products.$.name,String,Product Name displayed in the list,O
+,,,products.$.brand,String,Product Brand displayed in the list,O
+,,,products.$.variant,String,Product Variant displayed in the list,O
+,,,products.$.price,Number,Product Price displayed in the list,O
+,,,products.$.quantity,Integer,Product quantity displayed in the list,O
+,,,products.$.coupon,String,Coupon code associated with the product,O
+,,,products.$.position,Number,Position of product in the list,O
+,,,products.$.url,String,URL of the product page for product in the list,O
+,,,products.$.image_url,String,Image url of the product in the list,O
+eCommerce,Product List Filtered,User filtered a product list or category,list_id,String,Product list being viewed,O
+,,,category,String,Product category being viewed,O
+,,,filters,Array,Product filters that the customer is using,O
+,,,filters.$.type,String,ID of the filter type being used,O
+,,,filters.$.value,String,ID of the selection chosen,O
+,,,sorts,Array,Product sorting the customer is using,O
+,,,sorts.$.type,String,ID of the sort type being used,O
+,,,sorts.$.value,String,ID of the selection type being used,O
+,,,products,Array,Products displayed in the product list,R
+,,,products.$.product_id,String,Product ID displayed in the list,R
+,,,products.$.sku,String,Product SKU displayed in the list,O
+,,,products.$.category,String,Product Category displayed in the list,O
+,,,products.$.name,String,Product Name displayed in the list,O
+,,,products.$.brand,String,Product Brand displayed in the list,O
+,,,products.$.variant,String,Product Variant displayed in the list,O
+,,,products.$.price,Number,Product Price displayed in the list,O
+,,,products.$.quantity,Integer,Product quantity displayed in the list,O
+,,,products.$.coupon,String,Coupon code associated with the product,O
+,,,products.$.position,Number,Position of product in the list,O
+,,,products.$.url,String,URL of the product page for product in the list,O
+,,,products.$.image_url,String,Image url of the product in the list,O
+eCommerce,Promotion Viewed,User viewed promotion,promotion_id,String,ID of the promotion,O
+,,,promotion_creative,String,Description of promotion's creative,O
+,,,promotion_name,String,Name of the promotion,O
+,,,promotion_position,String,Position of the promotion,O
+eCommerce,Promotion Clicked,User clicked on promotion,promotion_id,String,ID of the promotion,O
+,,,promotion_creative,String,Description of promotion's creative,O
+,,,promotion_name,String,Name of the promotion,O
+,,,promotion_position,String,Position of the promotion,O
+eCommerce,Product Clicked,User clicked on a product,cart_id,String,Cart ID associated with the product displayed,O
+,,,product_id,String,Database ID of the product,R
+,,,sku,String,Sku of the product,O
+,,,category,String,Product category being viewed,O
+,,,name,String,Name of the product,O
+,,,brand,String,Brand of the product,O
+,,,variant,String,Variant of the product,O
+,,,price,Number,Price of the product,R
+,,,quantity,Integer,Quantity of the product,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,position,Integer,Position of product in the list,O
+,,,url,String,URL of the product page for product,O
+,,,image_url,String,Image url of the product,O
+eCommerce,Product Viewed,User viewed a product details,cart_id,String,Cart ID associated with the product displayed,O
+,,,product_id,String,Database ID of the product,R
+,,,sku,String,Sku of the product,O
+,,,category,String,Product category being viewed,O
+,,,name,String,Name of the product,O
+,,,brand,String,Brand of the product,O
+,,,variant,String,Variant of the product,O
+,,,price,Number,Price of the product,R
+,,,quantity,Integer,Quantity of the product,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,position,Integer,Position of product in the list,O
+,,,url,String,URL of the product page for product,O
+,,,image_url,String,Image url of the product,O
+eCommerce,Product Added,User added a product to their shopping cart,cart_id,String,Cart ID associated with the product displayed,O
+,,,product_id,String,Database ID of the product,R
+,,,sku,String,Sku of the product,O
+,,,category,String,Product category being viewed,O
+,,,name,String,Name of the product,O
+,,,brand,String,Brand of the product,O
+,,,variant,String,Variant of the product,O
+,,,price,Number,Price of the product,R
+,,,quantity,Integer,Quantity of the product,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,position,Integer,Position of product in the list,O
+,,,url,String,URL of the product page for product,O
+,,,image_url,String,Image url of the product,O
+eCommerce,Product Removed,User removed a product from their shopping cart,cart_id,String,Cart ID associated with the product displayed,O
+,,,product_id,String,Database ID of the product,R
+,,,sku,String,Sku of the product,O
+,,,category,String,Product category being viewed,O
+,,,name,String,Name of the product,O
+,,,brand,String,Brand of the product,O
+,,,variant,String,Variant of the product,O
+,,,price,Number,Price of the product,R
+,,,quantity,Integer,Quantity of the product,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,position,Integer,Position of product in the list,O
+,,,url,String,URL of the product page for product,O
+,,,image_url,String,Image url of the product,O
+eCommerce,Cart Viewed,User viewed their shopping cart,cart_id,String,Cart ID associated with the product displayed,O
+,,,products,Array,Products displayed in the product list,R
+,,,products.$.product_id,String,Product ID displayed in the list,R
+,,,products.$.sku,String,Product SKU displayed in the list,O
+,,,products.$.category,String,Product Category displayed in the list,O
+,,,products.$.name,String,Product Name displayed in the list,O
+,,,products.$.brand,String,Product Brand displayed in the list,O
+,,,products.$.variant,String,Product Variant displayed in the list,O
+,,,products.$.price,Number,Product Price displayed in the list,O
+,,,products.$.quantity,Integer,Product quantity displayed in the list,O
+,,,products.$.coupon,String,Coupon code associated with the product,O
+,,,products.$.position,Number,Position of product in the list,O
+,,,products.$.url,String,URL of the product page for product in the list,O
+,,,products.$.image_url,String,Image url of the product in the list,O
+eCommerce,Checkout Started,User initiated the order process (a transaction is created),order_id,String,Order/transaction ID,R
+,,,affiliation,String,Store or affiliation from which this transaction occurred,O
+,,,total,Number,Revenue with discounts and coupons added,O
+,,,revenue,Number,Revenue ($) associated with the transaction,R
+,,,shipping,Number,Shipping cost associated with the transaction,O
+,,,tax,Number,Total tax associated with the transaction,O
+,,,discount,Number,Total discount associated with the transaction,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,currency,String,Currency code associated with the transaction,O
+,,,products,Array,Products displayed in the product list,R
+,,,products.$.product_id,String,Product ID displayed in the list,R
+,,,products.$.sku,String,Product SKU displayed in the list,O
+,,,products.$.category,String,Product Category displayed in the list,O
+,,,products.$.name,String,Product Name displayed in the list,O
+,,,products.$.brand,String,Product Brand displayed in the list,O
+,,,products.$.variant,String,Product Variant displayed in the list,O
+,,,products.$.price,Number,Product Price displayed in the list,O
+,,,products.$.quantity,Integer,Product quantity displayed in the list,O
+,,,products.$.coupon,String,Coupon code associated with the product,O
+,,,products.$.position,Number,Position of product in the list,O
+,,,products.$.url,String,URL of the product page for product in the list,O
+,,,products.$.image_url,String,Image url of the product in the list,O
+eCommerce,Checkout Step Viewed,User viewed a checkout step,checkout_id,String,Checkout transaction ID,O
+,,,step,Integer,Number representing a step in the checkout process,O
+,,,shipping_method,String,String representing the shipping method chosen,O
+,,,payment_method,String,String representing the payment method chosen,O
+eCommerce,Checkout Step Completed,User completed a checkout step,checkout_id,String,Checkout transaction ID,O
+,,,step,Integer,Number representing a step in the checkout process,O
+,,,shipping_method,String,String representing the shipping method chosen,O
+,,,payment_method,String,String representing the payment method chosen,O
+eCommerce,Payment Info Entered,User added payment information,checkout_id,String,Checkout transaction ID,O
+,,,order_id,String,Order/transaction ID,R
+,,,step,Integer,Number representing a step in the checkout process,O
+,,,shipping_method,String,String representing the shipping method chosen,O
+,,,payment_method,String,String representing the payment method chosen,
+eCommerce,Order Completed,User completed the order,order_id,String,Order/transaction ID,R
+,,,affiliation,String,Store or affiliation from which this transaction occurred,O
+,,,total,Number,Revenue with discounts and coupons added,O
+,,,revenue,Number,Revenue ($) associated with the transaction,R
+,,,shipping,Number,Shipping cost associated with the transaction,O
+,,,tax,Number,Total tax associated with the transaction,O
+,,,discount,Number,Total discount associated with the transaction,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,currency,String,Currency code associated with the transaction,O
+,,,products,Array,Products displayed in the product list,R
+,,,products.$.product_id,String,Product ID displayed in the list,R
+,,,products.$.sku,String,Product SKU displayed in the list,O
+,,,products.$.category,String,Product Category displayed in the list,O
+,,,products.$.name,String,Product Name displayed in the list,O
+,,,products.$.brand,String,Product Brand displayed in the list,O
+,,,products.$.variant,String,Product Variant displayed in the list,O
+,,,products.$.price,Number,Product Price displayed in the list,O
+,,,products.$.quantity,Integer,Product quantity displayed in the list,O
+,,,products.$.coupon,String,Coupon code associated with the product,O
+,,,products.$.position,Number,Position of product in the list,O
+,,,products.$.url,String,URL of the product page for product in the list,O
+,,,products.$.image_url,String,Image url of the product in the list,O
+eCommerce,Order Updated,User updated the order,order_id,String,Order/transaction ID,R
+,,,affiliation,String,Store or affiliation from which this transaction occurred,O
+,,,total,Number,Revenue with discounts and coupons added,O
+,,,revenue,Number,Revenue ($) associated with the transaction,R
+,,,shipping,Number,Shipping cost associated with the transaction,O
+,,,tax,Number,Total tax associated with the transaction,O
+,,,discount,Number,Total discount associated with the transaction,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,currency,String,Currency code associated with the transaction,O
+,,,products,Array,Products displayed in the product list,R
+,,,products.$.product_id,String,Product ID displayed in the list,R
+,,,products.$.sku,String,Product SKU displayed in the list,O
+,,,products.$.category,String,Product Category displayed in the list,O
+,,,products.$.name,String,Product Name displayed in the list,O
+,,,products.$.brand,String,Product Brand displayed in the list,O
+,,,products.$.variant,String,Product Variant displayed in the list,O
+,,,products.$.price,Number,Product Price displayed in the list,O
+,,,products.$.quantity,Integer,Product quantity displayed in the list,O
+,,,products.$.coupon,String,Coupon code associated with the product,O
+,,,products.$.position,Number,Position of product in the list,O
+,,,products.$.url,String,URL of the product page for product in the list,O
+,,,products.$.image_url,String,Image url of the product in the list,O
+eCommerce,Order Refunded,User refunded the order,order_id,String,Order/transaction ID,R
+,,,affiliation,String,Store or affiliation from which this transaction occurred,O
+,,,total,Number,Revenue with discounts and coupons added,O
+,,,revenue,Number,Revenue ($) associated with the transaction,R
+,,,shipping,Number,Shipping cost associated with the transaction,O
+,,,tax,Number,Total tax associated with the transaction,O
+,,,discount,Number,Total discount associated with the transaction,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,currency,String,Currency code associated with the transaction,O
+,,,products,Array,Products displayed in the product list,R
+,,,products.$.product_id,String,Product ID displayed in the list,R
+,,,products.$.sku,String,Product SKU displayed in the list,O
+,,,products.$.category,String,Product Category displayed in the list,O
+,,,products.$.name,String,Product Name displayed in the list,O
+,,,products.$.brand,String,Product Brand displayed in the list,O
+,,,products.$.variant,String,Product Variant displayed in the list,O
+,,,products.$.price,Number,Product Price displayed in the list,O
+,,,products.$.quantity,Integer,Product quantity displayed in the list,O
+,,,products.$.coupon,String,Coupon code associated with the product,O
+,,,products.$.position,Number,Position of product in the list,O
+,,,products.$.url,String,URL of the product page for product in the list,O
+,,,products.$.image_url,String,Image url of the product in the list,O
+eCommerce,Order Cancelled,User cancelled the order,order_id,String,Order/transaction ID,R
+,,,affiliation,String,Store or affiliation from which this transaction occurred,O
+,,,total,Number,Revenue with discounts and coupons added,O
+,,,revenue,Number,Revenue ($) associated with the transaction,R
+,,,shipping,Number,Shipping cost associated with the transaction,O
+,,,tax,Number,Total tax associated with the transaction,O
+,,,discount,Number,Total discount associated with the transaction,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,currency,String,Currency code associated with the transaction,O
+,,,products,Array,Products displayed in the product list,R
+,,,products.$.product_id,String,Product ID displayed in the list,R
+,,,products.$.sku,String,Product SKU displayed in the list,O
+,,,products.$.category,String,Product Category displayed in the list,O
+,,,products.$.name,String,Product Name displayed in the list,O
+,,,products.$.brand,String,Product Brand displayed in the list,O
+,,,products.$.variant,String,Product Variant displayed in the list,O
+,,,products.$.price,Number,Product Price displayed in the list,O
+,,,products.$.quantity,Integer,Product quantity displayed in the list,O
+,,,products.$.coupon,String,Coupon code associated with the product,O
+,,,products.$.position,Number,Position of product in the list,O
+,,,products.$.url,String,URL of the product page for product in the list,O
+,,,products.$.image_url,String,Image url of the product in the list,O
+eCommerce,Coupon Entered,User entered a coupon on a shopping cart or order,order_id,String,Order/transaction ID,R
+,,,cart_id,String,Cart ID associated with the product displayed,O
+,,,coupon_id,String,ID of the coupon,R
+,,,coupon_name,String,Name of the coupon,O
+eCommerce,Coupon Applied,Coupon was applied on a user’s shopping cart or order,order_id,String,Order/transaction ID,R
+,,,cart_id,String,Cart ID associated with the product displayed,O
+,,,coupon_id,String,ID of the coupon,R
+,,,coupon_name,String,Name of the coupon,O
+,,,discount,Number,Total discount associated with the transaction,O
+eCommerce,Coupon Denied,Coupon was denied from a user’s shopping cart or order,order_id,String,Order/transaction ID,R
+,,,cart_id,String,Cart ID associated with the product displayed,O
+,,,coupon_id,String,ID of the coupon,R
+,,,coupon_name,String,Name of the coupon,O
+,,,reason,String,Reason the coupon was denied,O
+eCommerce,Coupon Removed,User removed a coupon from a cart or order,order_id,String,Order/transaction ID,R
+,,,cart_id,String,Cart ID associated with the product displayed,O
+,,,coupon_id,String,ID of the coupon,R
+,,,coupon_name,String,Name of the coupon,O
+,,,discount,Number,Total discount associated with the transaction,O
+eCommerce,Product Added to Wishlist,User added a product to the wish list,wishlist_id,String,Wishlist ID to which the product was added,R
+,,,wishlist_name,String,Wishlist name to which the product was added,O
+,,,product_id,String,Database ID of the product,R
+,,,sku,String,Sku of the product,O
+,,,category,String,Product category being viewed,O
+,,,name,String,Name of the product,O
+,,,brand,String,Brand of the product,O
+,,,variant,String,Variant of the product,O
+,,,price,Number,Price of the product,R
+,,,quantity,Integer,Quantity of the product,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,position,Integer,Position of product in the list,O
+,,,url,String,URL of the product page for product,O
+,,,image_url,String,Image url of the product,O
+eCommerce,Product Removed from Wishlist,User removed a product from the wish list,wishlist_id,String,Wishlist ID to which the product was added,R
+,,,wishlist_name,String,Wishlist name to which the product was added,O
+,,,product_id,String,Database ID of the product,R
+,,,sku,String,Sku of the product,O
+,,,category,String,Product category being viewed,O
+,,,name,String,Name of the product,O
+,,,brand,String,Brand of the product,O
+,,,variant,String,Variant of the product,O
+,,,price,Number,Price of the product,R
+,,,quantity,Integer,Quantity of the product,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,position,Integer,Position of product in the list,O
+,,,url,String,URL of the product page for product,O
+,,,image_url,String,Image url of the product,O
+eCommerce,Wishlist Product Added to Cart,User added a wishlist product to the cart,wishlist_id,String,Wishlist ID to which the product was added,R
+,,,wishlist_name,String,Wishlist name to which the product was added,O
+,,,cart_id,String,Cart ID associated with the product displayed,O
+,,,product_id,String,Database ID of the product,R
+,,,sku,String,Sku of the product,O
+,,,category,String,Product category being viewed,O
+,,,name,String,Name of the product,O
+,,,brand,String,Brand of the product,O
+,,,variant,String,Variant of the product,O
+,,,price,Number,Price of the product,R
+,,,quantity,Integer,Quantity of the product,O
+,,,coupon,String,Coupon code associated with the product,O
+,,,position,Integer,Position of product in the list,O
+,,,url,String,URL of the product page for product,O
+,,,image_url,String,Image url of the product,O
+eCommerce,Product Shared,Shared a product with one or more friends,share_via,String,Method of sharing,R
+,,,share_message,String,Message that the sender sent,O
+,,,recipient,String,Recipient of the sharing,O
+,,,product_id,String,Database ID of the product,R
+,,,sku,String,Sku of the product,O
+,,,category,String,Product category being viewed,O
+,,,name,String,Name of the product,O
+,,,brand,String,Brand of the product,O
+,,,variant,String,Variant of the product,O
+,,,price,Number,Price of the product,R
+,,,url,String,URL of the product page for product,O
+,,,image_url,String,Image url of the product,O
+eCommerce,Cart Shared,Shared the cart with one or more friends,share_via,String,Method of sharing,R
+,,,share_message,String,Message that the sender sent,O
+,,,recipient,String,Recipient of the sharing,O
+,,,cart_id,String,Cart ID associated with the product displayed,O
+,,,products,Array,Products displayed in the product list,R
+,,,products.$.product_id,String,Product ID displayed in the list,R
+eCommerce,Product Reviewed,User reviewed a product,product_id,String,Database ID of the product,R
+,,,review_id,String,ID of the review posted,O
+,,,review_body,String,Content of the review,O
+,,,rating,Integer,Star rating,O
+B2B SaaS,Account Created,New account is created,account_name,String,The name of the account being created,R
+,,,context,Array,The context array,O
+,,,context.group_id,String,The id of the account being created/updated/deleted,O
+B2B SaaS,Account Deleted,Account is deleted,account_name,String,The name of the account being created,R
+,,,context,Array,The context array,O
+,,,context.group_id,String,The id of the account being created/updated/deleted,O
+B2B SaaS,Signed Up,User signs up for your service,username,String,The username of the user,R
+,,,context,Array,The context array,O
+,,,context.group_id,String,The id of the account being created/updated/deleted,O
+,,,signup_type,String,The type of signup (viral or organic),O
+,,,first_name,String,User's first name,O
+,,,last_name,String,User's last name,O
+,,,email,String,User's email address,R
+,,,phone,String,User's phone number,O
+,,,title,String,User's salutation,O
+B2B SaaS,Signed In,User signs in to your service,username,String,The username of the user,R
+,,,context,Array,The context array,O
+,,,context.group_id,String,The id of the account being created/updated/deleted,O
+B2B SaaS,Signed Out,User signs out for your service,username,String,The username of the user,R
+,,,context,Array,The context array,O
+,,,context.group_id,String,The id of the account being created/updated/deleted,O
+B2B SaaS,Invite Sent,User invites another user,invitee_email,String,Email address of the person receiving the invite,R
+,,,invitee_first_name,String,First name of the person receiving the invite,O
+,,,invitee_last_name,String,Last name of the person receiving the invite,O
+,,,invitee_role,String,Role of the invitee,O
+B2B SaaS,Account Added User,User is added to a group or account,context,Array,The context array,O
+,,,context.group_id,String,The id of the account being created/updated/deleted,O
+,,,role,String,Permission group for the user,O
+B2B SaaS,Account Removed User,User is removed from a group or account,context,Array,The context array,O
+,,,context.group_id,String,The id of the account being created/updated/deleted,O
+B2B SaaS,Trial Started,Trial is started,trial_start_date,String,Date when the trial starts (ISO-8601 date string),R
+,,,trial_end_date,String,Date when the trial ends (ISO-8601 date string),R
+,,,trial_plan_name,String,Name of the plan being trialed,O
+,,,context,Array,The context array,O
+,,,context.group_id,String,The id of the account being created/updated/deleted,O
+B2B SaaS,Trial Ended,Trial is ended,trial_start_date,String,Date when the trial starts (ISO-8601 date string),R
+,,,trial_end_date,String,Date when the trial ends (ISO-8601 date string),R
+,,,trial_plan_name,String,Name of the plan being trialed,O
+,,,context,Array,The context array,O
+,,,context.group_id,String,The id of the account being created/updated/deleted,O
+Video,Video Playback Completed,Playback is complete and only when the session is finished,session_id,String,The unique ID of the overall session.,O
+,,,content_asset_id,String,Asset Id of the video playing/about to be played,O
+,,,content_pod_id,String,Pod Id of the video playing/about to be played,O
+,,,position,Integer,Position of product in the list,O
+,,,total_length,Integer,Total duration of the playback in seconds,O
+,,,bitrate,Integer,The current kbps.,O
+,,,framerate,Integer,The average fps.,O
+,,,video_player,String,"The name of the video player (ie ‘youtube’, ‘vimeo’).",O
+,,,sound,Integer,The sound level of the playback,O
+,,,full_screen,Boolean,true if playback is in full screen mode,O
+,,,ad_enabled,Boolean,false if the user has any ad blockers,O
+,,,quality,String,The quality of the video,O
+,,,livestream,Boolean,True f the playback will be a livetream,O
+Video,Video Content Started,The video content starts playing,session_id,String,The unique ID of the overall session.,O
+,,,content_asset_id,String,Asset Id of the video playing/about to be played,O
+,,,content_pod_id,String,Pod Id of the video playing/about to be played,O
+,,,title,String,User's salutation,O
+,,,description,String,Short description of the video content.,O
+,,,keywords,Array,Arbitrary keywords/tags that describe/categorize the content.,O
+,,,season,String,The season number if applicable.,O
+,,,episode,String,The episode number if applicable.,O
+,,,genre,String,"The genre of the content, ie. ‘comedy’, ‘action’.",O
+,,,program,String,"The name of the program, show, etc. of the content if applicable.",O
+,,,publisher,String,"The content creator, author, producer, or publisher.",O
+,,,position,Integer,Position of product in the list,O
+,,,total_length,Integer,Total duration of the playback in seconds,O
+,,,channel,String,The channel in which the video content is playing,O
+,,,full_episode,Boolean,true if content is a full episode and false otherwise.,O
+,,,livestream,Boolean,True f the playback will be a livetream,O
+,,,airdate,String,ISO 8601 Date String for the original air date or published date.,O
+,,,bitrate,Integer,The current kbps.,O
+,,,framerate,Integer,The average fps.,O
+Video,Video Content Playing,Heartbeat every N (we recommend 10) seconds to track how far into the content the user is currently viewing.,session_id,String,The unique ID of the overall session.,O
+,,,content_asset_id,String,Asset Id of the video playing/about to be played,O
+,,,content_pod_id,String,Pod Id of the video playing/about to be played,O
+,,,title,String,User's salutation,O
+,,,description,String,Short description of the video content.,O
+,,,keywords,Array,Arbitrary keywords/tags that describe/categorize the content.,O
+,,,season,String,The season number if applicable.,O
+,,,episode,String,The episode number if applicable.,O
+,,,genre,String,"The genre of the content, ie. ‘comedy’, ‘action’.",O
+,,,program,String,"The name of the program, show, etc. of the content if applicable.",O
+,,,publisher,String,"The content creator, author, producer, or publisher.",O
+,,,position,Integer,Position of product in the list,O
+,,,total_length,Integer,Total duration of the playback in seconds,O
+,,,channel,String,The channel in which the video content is playing,O
+,,,full_episode,Boolean,true if content is a full episode and false otherwise.,O
+,,,livestream,Boolean,True f the playback will be a livetream,O
+,,,airdate,String,ISO 8601 Date String for the original air date or published date.,O
+,,,bitrate,Integer,The current kbps.,O
+,,,framerate,Integer,The average fps.,O
+Video,Video Content Completed,The video content finishes playing,session_id,String,The unique ID of the overall session.,O
+,,,content_asset_id,String,Asset Id of the video playing/about to be played,O
+,,,content_pod_id,String,Pod Id of the video playing/about to be played,O
+,,,title,String,User's salutation,O
+,,,description,String,Short description of the video content.,O
+,,,keywords,Array,Arbitrary keywords/tags that describe/categorize the content.,O
+,,,season,String,The season number if applicable.,O
+,,,episode,String,The episode number if applicable.,O
+,,,genre,String,"The genre of the content, ie. ‘comedy’, ‘action’.",O
+,,,program,String,"The name of the program, show, etc. of the content if applicable.",O
+,,,publisher,String,"The content creator, author, producer, or publisher.",O
+,,,position,Integer,Position of product in the list,O
+,,,total_length,Integer,Total duration of the playback in seconds,O
+,,,channel,String,The channel in which the video content is playing,O
+,,,full_episode,Boolean,true if content is a full episode and false otherwise.,O
+,,,livestream,Boolean,True f the playback will be a livetream,O
+,,,airdate,String,ISO 8601 Date String for the original air date or published date.,O
+,,,bitrate,Integer,The current kbps.,O
+,,,framerate,Integer,The average fps.,O
+Video,Video Ad Started,The ad content starts playing,session_id,String,The unique ID of the overall session.,O
+,,,ad_asset_id,String,The unique ID of the ad asset.,O
+,,,ad_pod_id,String,The unique ID of the ad pod.,O
+,,,ad_type,String,The ad type,O
+,,,ad_title,String,The title of the video ad.,O
+,,,ad_position,Integer,The current index position in seconds of the playhead with respect to the length of the ad.,O
+,,,ad_pod_position,Integer,Position of the ad asset relative to other assets in the same pod.,O
+,,,total_ad_length,Integer,The total duration of the current ad asset in seconds.,O
+,,,ad_publisher,String,"The ad creator, author, producer, or publisher.",O
+,,,ad_load_type,String,Linear if ads are same for all users.,O
+Video,Video Ad Playing,Heartbeat event fired every N seconds that the ad plays,session_id,String,The unique ID of the overall session.,O
+,,,ad_asset_id,String,The unique ID of the ad asset.,O
+,,,ad_pod_id,String,The unique ID of the ad pod.,O
+,,,ad_type,String,The ad type,O
+,,,ad_title,String,The title of the video ad.,O
+,,,ad_position,Integer,The current index position in seconds of the playhead with respect to the length of the ad.,O
+,,,ad_pod_position,Integer,Position of the ad asset relative to other assets in the same pod.,O
+,,,total_ad_length,Integer,The total duration of the current ad asset in seconds.,O
+,,,ad_publisher,String,"The ad creator, author, producer, or publisher.",O
+,,,ad_load_type,String,Linear if ads are same for all users.,O
+Video,Video Ad Completed,The ad content completes playing,session_id,String,The unique ID of the overall session.,O
+,,,ad_asset_id,String,The unique ID of the ad asset.,O
+,,,ad_pod_id,String,The unique ID of the ad pod.,O
+,,,ad_type,String,The ad type,O
+,,,ad_title,String,The title of the video ad.,O
+,,,ad_position,Integer,The current index position in seconds of the playhead with respect to the length of the ad.,O
+,,,ad_pod_position,Integer,Position of the ad asset relative to other assets in the same pod.,O
+,,,total_ad_length,Integer,The total duration of the current ad asset in seconds.,O
+,,,ad_publisher,String,"The ad creator, author, producer, or publisher.",O
+,,,ad_load_type,String,Linear if ads are same for all users.,O
+Mobile,Application Installed,User first opens your mobile app. Collected automatically!,version,String,Version installed,O
+,,,build,Number,Build number of the installed app,O
+Mobile,Application Opened,User launches or foregrounds your mobile app after the first open Collected Automatically!,from_background,Boolean,If application transitioned from “Background” to “Inactive” state prior to foregrounding (as opposed to from “Not Running” state). Automatically collected on iOS only.,O
+,,,url,String,The value of UIApplicationLaunchOptionsURLKey from launchOptions (auto-collected on iOS only),O
+,,,referring_application,,,
+,,,version,String,Version installed,O
+,,,build,Number,Build number of the installed app,O
+Mobile,Application Updated,User updates the app Collected automatically!,previous_version,String,Previously recorded version,O
+,,,previous_build,Number,Previously recorded build,O
+,,,version,String,Version installed,O
+,,,build,Number,Build number of the installed app,O
+Mobile,Application Backgrounded,User backgrounds the application upon applicationDidEnterBackground,,,,
+Mobile,Application Crashed,The application crashes.,,,,
+Mobile,Application Uninstalled,User uninstalls the application Often collected automatically!,,,,
+Mobile,Push Notification Received,Push notification received by your app Collected automatically by iOS!,push_campaign[source],String,Push provider,O
+,,,push_campaign[name],String,Campaign name,O
+,,,push_campaign[medium],String,What type of link was pushed,O
+,,,push_campaign[content],String,Content of the notification,O
+Mobile,Push Notification Tapped,User taps push notification associated with your app Collected automatically by iOS!,action,String,Custom string if notification is “actionable“ Default: “Open”,O
+,,,push_campaign[source],String,Push provider,O
+,,,push_campaign[name],String,Campaign name,O
+,,,push_campaign[medium],String,What type of link was pushed,O
+,,,push_campaign[content],String,Content of the notification,O
+Mobile,Push Notification Bounced,Push notification from a provider bounces,action,String,Custom string if notification is “actionable“ Default: “Open”,O
+,,,push_campaign[source],String,Push provider,O
+,,,push_campaign[name],String,Campaign name,O
+,,,push_campaign[medium],String,What type of link was pushed,O
+,,,push_campaign[content],String,Content of the notification,O
+Mobile,Install Attributed,Segment or an integrated partner can discern the source of an install,provider,String,Attribution provider,O
+,,,campaign[source],String,Campaign source -- attributed ad network,O
+,,,campaign[name],String,Name of the attributed campaign,O
+,,,campaign[medium],String,What type of link was used,O
+,,,campaign[content],String,Content of the campaign,O
+,,,campaign[ad_creative],String,Ad creative name,O
+,,,campaign[ad_group],String,Ad group name,O
+Mobile,Deep Link Clicked,User clicks on a deep link associated with your app,deep_link_provider,String,The deep link provider,R
+,,,deep_link_url,String,The deep link url clicked,R
+Mobile,Deep Link Opened,User opens your app via a deep link,deep_link_provider,String,The deep link provider,R
+,,,deep_link_url,String,The deep link url clicked,R
