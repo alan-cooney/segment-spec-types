@@ -1,4 +1,4 @@
-﻿Spec,Name,Event Description,prop name,type,prop description,Req'd/Optional
+﻿specification,eventName,eventDescription,propertyName,type,propertyDescription,requiredOrOptional
 eCommerce,Products Searched,User searched for products,query,String,Query the user searched with,O
 eCommerce,Product List Viewed,User viewed a product list or category,list_id,String,Product list being viewed,O
 ,,,category,String,Product category being viewed,O
