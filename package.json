@@ -10,7 +10,8 @@
     "test": "./node_modules/.bin/jest",
     "coverage": "./node_modules/.bin/jest --collect-coverage",
     "lint": "./node_modules/.bin/eslint . --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore",
-    "bump": "./node_modules/.bin/versiony package.json --patch"
+    "bump": "./node_modules/.bin/versiony package.json --patch",
+    "createSchemas": "ts-node ./src/bin.ts"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
@@ -45,6 +46,10 @@
     }
   },
   "dependencies": {
-    "papaparse": "^5.3.1"
+    "change-case": "^4.1.2",
+    "papaparse": "^5.3.1",
+    "set-value": "^4.0.0",
+    "ts-node": "^10.1.0",
+    "union-value": "^2.0.1"
   }
 }

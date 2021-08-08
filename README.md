@@ -1,2 +1,3 @@
 # segment-spec-types
-Generate commented typescript types for the segment spec
+
+Generate JSON schemas for the segment spec

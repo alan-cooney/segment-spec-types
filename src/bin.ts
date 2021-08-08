@@ -1,0 +1,3 @@
+import { createAllSchemas } from ".";
+
+createAllSchemas();
