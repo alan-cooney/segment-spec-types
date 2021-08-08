@@ -10,7 +10,7 @@ import union from "union-value";
  * Read the segment CSV file
  */
 export function readCSV(): SegmentCSVSpecRow[] {
-  const csv = readFileSync(join(__dirname, "../segment-spec.csv"), "utf8");
+  const csv = readFileSync(join(__dirname, "./segment-spec.csv"), "utf8");
   const { data } = Papa.parse(csv, {
     header: true,
     transformHeader: (h: string) => h.replace(/\s+/g, ""), // Remove whitespace
@@ -171,7 +171,7 @@ export function createAllSchemas(): void {
   events.forEach((event) => {
     // Create the file path
     const fileName = `${paramCase(event.name)}.json`;
-    const dir = join(__dirname, "../schemas/", paramCase(event.specification));
+    const dir = join(__dirname, "../../segment-schemas/", paramCase(event.specification));
     const path = join(dir, fileName);
 
     // Create the directory
