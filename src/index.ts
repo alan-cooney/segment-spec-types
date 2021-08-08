@@ -61,6 +61,7 @@ export function convertPath(key: string): {
   propertyPath: string;
   requiredPath: string;
   propertyName: string;
+  isInArray: boolean;
 } {
   // Note some paths have bracket notation and some dot (e.g. a[b] rather than
   // a.b) so we need to make this uniform first (using dot notation)
@@ -69,6 +70,7 @@ export function convertPath(key: string): {
   const propertyPath: string[] = ["properties"];
   const requiredPath: string[] = [];
   let propertyName = "";
+  let lastItemIsInArray = false;
 
   keySplit.forEach((keyPart, index) => {
     // Set the property name
@@ -86,8 +88,10 @@ export function convertPath(key: string): {
 
     if (isInArray) {
       propertyPath.push("items");
+      propertyPath.push("properties");
       requiredPath.push("properties");
       requiredPath.push(keySplit[index - 2]);
+      requiredPath.push("items");
     }
 
     if (isInObject) {
@@ -106,6 +110,9 @@ export function convertPath(key: string): {
 
     if (isLastItem) {
       requiredPath.push("required");
+      if (isInArray) {
+        lastItemIsInArray = true;
+      }
     }
   });
 
@@ -113,6 +120,7 @@ export function convertPath(key: string): {
     propertyPath: propertyPath.join("."),
     requiredPath: requiredPath.join("."),
     propertyName,
+    isInArray: lastItemIsInArray,
   };
 }
 
@@ -130,7 +138,7 @@ export function createJSONSchema(event: Event): JSONSchema {
   };
 
   event.properties.forEach((property) => {
-    const { propertyPath, requiredPath, propertyName } = convertPath(
+    const { propertyPath, requiredPath, propertyName, isInArray } = convertPath(
       property.name
     );
 
@@ -138,6 +146,16 @@ export function createJSONSchema(event: Event): JSONSchema {
       type: property.type,
       description: property.description,
     });
+
+    // If a property within an array of objects, make sure the array items type
+    // is set to "object"
+    if (isInArray) {
+      const objectTypePath = propertyPath.split(".");
+      objectTypePath.pop();
+      objectTypePath.pop();
+      objectTypePath.push("type");
+      set(res, objectTypePath.join("."), "object");
+    }
 
     if (property.required) {
       union(res, requiredPath, [propertyName]);
@@ -165,7 +183,7 @@ export function createAllSchemas(): void {
     const schema = createJSONSchema(event);
 
     // Write the file
-    writeFileSync(path, JSON.stringify(schema, undefined, 4), "utf8");
+    writeFileSync(path, JSON.stringify(schema, undefined, 2), "utf8");
   });
 }
 

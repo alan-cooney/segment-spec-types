@@ -64,6 +64,7 @@ describe("convertPath", () => {
       propertyPath: "properties.order_id",
       requiredPath: "required",
       propertyName: "order_id",
+      isInArray: false,
     });
   });
 
@@ -74,6 +75,7 @@ describe("convertPath", () => {
       propertyPath: "properties.products",
       requiredPath: "required",
       propertyName: "products",
+      isInArray: false,
     });
   });
 
@@ -81,9 +83,10 @@ describe("convertPath", () => {
     const key = "products.$.id";
     const res = convertPath(key);
     expect(res).toEqual({
-      propertyPath: "properties.products.items.id",
-      requiredPath: "properties.products.required",
+      propertyPath: "properties.products.items.properties.id",
+      requiredPath: "properties.products.items.required",
       propertyName: "id",
+      isInArray: true,
     });
   });
 
@@ -94,6 +97,7 @@ describe("convertPath", () => {
       propertyPath: "properties.a.properties.b",
       requiredPath: "properties.a.required",
       propertyName: "b",
+      isInArray: false,
     });
   });
 
@@ -104,6 +108,7 @@ describe("convertPath", () => {
       propertyPath: "properties.a.properties.b.properties.c",
       requiredPath: "properties.a.properties.b.required",
       propertyName: "c",
+      isInArray: false,
     });
   });
 
@@ -114,6 +119,7 @@ describe("convertPath", () => {
       propertyPath: "properties.a.properties.b",
       requiredPath: "properties.a.required",
       propertyName: "b",
+      isInArray: false,
     });
   });
 });
@@ -168,18 +174,21 @@ Object {
     },
     "products": Object {
       "items": Object {
-        "category": Object {
-          "description": "Product Category displayed in the list",
-          "type": "string",
+        "properties": Object {
+          "category": Object {
+            "description": "Product Category displayed in the list",
+            "type": "string",
+          },
+          "product_id": Object {
+            "description": "Product ID displayed in the list",
+            "type": "string",
+          },
         },
-        "product_id": Object {
-          "description": "Product ID displayed in the list",
-          "type": "string",
-        },
+        "required": Array [
+          "product_id",
+        ],
+        "type": "object",
       },
-      "required": Array [
-        "product_id",
-      ],
     },
   },
   "required": Array [],
